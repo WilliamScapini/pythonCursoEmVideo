@@ -10,7 +10,7 @@ while condicional:
     valor1 = input("Qual o valor da temperatura em Graus Celsius °C ?\n")
     if isFloat(valor1):
         num = float(valor1)
-        fahrenheit = 5/9 * (num-32)
+        fahrenheit = 32 + (num*9/5)
         print("A temperatura de {:.2f}°C em fahrenheit é {:.2f}°F".format(num,fahrenheit))
         condicional = False
     else:
