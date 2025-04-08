@@ -1,3 +1,5 @@
+import os
+
 condicional = True
 def isFloat(f):
     try:
@@ -14,4 +16,5 @@ while condicional:
         print("A temperatura de {:.2f}°C em fahrenheit é {:.2f}°F".format(num,fahrenheit))
         condicional = False
     else:
+        os.system('clear')
         print('Você digitou um valor inválido\nPor favor')
