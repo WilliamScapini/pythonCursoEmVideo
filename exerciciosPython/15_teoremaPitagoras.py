@@ -21,7 +21,7 @@ while condicional:
             if isFloat(valor2):
                 catadjacente = float(valor2)
                 hipotenusa = mat.sqrt(mat.pow(catadjacente,2)+mat.pow(catoposto,2))
-                print("Com os catetos sendo {:.2f} e {:.2f}\n a hipotesuna será {:.2f}".format(catoposto,catadjacente,hipotenusa))
+                print("Com os catetos sendo {:.2f} e {:.2f}\na hipotesuna será {:.2f}".format(catoposto,catadjacente,hipotenusa))
                 condicional1 = False
             else:
                 os.system("clear")
