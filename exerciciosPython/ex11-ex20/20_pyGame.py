@@ -1,7 +1,7 @@
 import pygame as pg 
 pg.init()
 try:
-    pg.mixer.music.load('exerciciosPython/arquivo.mp3')
+    pg.mixer.music.load('exerciciosPython/ex11-ex20/arquivo.mp3')
     pg.mixer.music.play()
     print("Está tocando?")
     while pg.mixer.music.get_busy():
