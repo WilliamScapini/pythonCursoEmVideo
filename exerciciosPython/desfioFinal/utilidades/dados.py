@@ -126,13 +126,20 @@ def mostraCadastros(nome_arquivo: str) -> None:
     # Lê os cadastros armazenados no arquivo
     cadastros = lerArquivo(caminho)
 
-    # Se houver cadastros, exibe-os
+    # Se houver cadastros, exibe-os em formato de tabela
     if cadastros:
         escreva("PESSOAS CADASTRADAS", "=", letraAzul)
+        
+        # Cabeçalho da tabela
+        print(f"{'Nome'.ljust(30)}{'Idade'.rjust(10)}")  # 'Nome' com 30 espaços à esquerda e 'Idade' com 10 à direita
+        print('-' * 40)  # Linha separadora da tabela
+
+        # Exibe os dados dos cadastros
         for pessoa in cadastros:
-            print(f"Nome: {pessoa['nome']}")
-            print(f"Idade: {pessoa['idade']}")
-            print("-" * 20)
+            nome = pessoa['nome'].ljust(30)  # Nome alinhado à esquerda com 30 espaços
+            idade = str(pessoa['idade']).rjust(10)  # Idade alinhada à direita com 10 espaços
+            print(f"{nome}{idade}")
+
     else:
         # Se não houver cadastros, exibe uma mensagem de erro
         escreva("NENHUM CADASTRO ENCONTRADO!", "=", letraVermelho)
